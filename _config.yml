@@ -59,3 +59,10 @@ pagination_dir: page
 theme: icarus
 deploy:
   type: ''
+
+feed:
+  type: rss2
+  path: sitemap.xml
+  limit: 20
+  hub:
+  content: false

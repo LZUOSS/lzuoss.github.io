@@ -100,7 +100,7 @@ head:
         # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
         - ''
     # URL or path to the website's RSS atom.xml
-    rss: 
+    rss: https://lzuoss.github.io/sitemap.xml
 # Page top navigation bar configurations
 navbar:
     # Navigation menu items
@@ -211,9 +211,8 @@ search:
     #    qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-#暂时关闭分享
-#share:
-#    type: sharethis
+share:
+    type: addtoany
     # URL to the ShareThis share plugin script
 #    install_url: ''
 # Sidebar configurations.
@@ -360,7 +359,7 @@ plugins:
         tracking_id: 
     # BuSuanZi site/page view counter
     # https://busuanzi.ibruce.info
-    busuanzi: false
+    busuanzi: true
     # CNZZ statistics
     # https://www.umeng.com/web
     cnzz:
@@ -416,12 +415,13 @@ plugins:
     twitter_conversion_tracking:
         # Twitter Pixel ID
         pixel_id: 
+
 # CDN provider settings
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:
     # Name or URL template of the JavaScript and/or stylesheet CDN provider
     cdn: jsdelivr
     # Name or URL template of the webfont CDN provider
-    fontcdn: google
+    fontcdn: ustc
     # Name or URL of the fontawesome icon font CDN provider
     iconcdn: fontawesome
