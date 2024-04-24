@@ -211,8 +211,9 @@ search:
     #    qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-share:
-    type: addtoany
+#禁用分享
+#share:
+    #type: addtoany
     # URL to the ShareThis share plugin script
 #    install_url: ''
 # Sidebar configurations.
