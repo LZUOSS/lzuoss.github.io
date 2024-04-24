@@ -1,48 +1,37 @@
 name: Pages
 
-on:
-  push:
-    branches:
-      - master # default branch
+on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, latest]
+      fail-fast: false
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # If your repository depends on submodule, please see: https://github.com/actions/checkout
-          submodules: recursive
-      - name: Use Node.js 18.16.0
-        uses: actions/setup-node@v3
+          repository: hexojs/hexo-starter
+      - uses: actions/checkout@v3
         with:
-          node-version: '18.16.0'
-      - name: Cache NPM dependencies
-        uses: actions/cache@v3
+          path: themes/icarus
+      - uses: actions/checkout@v3
+        with:
+          repository: SukkaLab/hexo-many-posts
+          path: source/_posts/hexo-many-posts
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v3
         with:
           path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./public
-  deploy:
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          key: npm-cache
+          restore-keys: npm-cache
+      - run: npm install
+      - run: >
+          npm install $(node -e "const deps=require('./themes/icarus/package.json').dependencies;
+          console.log(Object.keys(deps).map(key=>key+'@'+deps[key]).join(' '));")
+      - run: npm install hexo-tag-embed
+      - run: npx hexo config theme icarus
+      - run: time NODE_ENV=production npx hexo g -b
