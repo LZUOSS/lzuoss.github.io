@@ -42,8 +42,8 @@ npm npm install -S hexo-theme-icarus hexo-renderer-inferno
 ```
 
 在 Hexo 根目录的 _config.yml 文件中，将 theme 值修改为 Icarus：
-```_config.yml
-theme: Icarus
+```bash
+theme: icarus
 ```
 或执行命令：
 ```bash
@@ -72,7 +72,7 @@ $ git push -u origin main
 使用 node --version 指令检查你电脑上的 Node.js 版本，并记下该版本 (例如：v18.16.0)  
 在储存库中前往 Settings > Pages > Source，并将 Source 改为 GitHub Actions。  
 在储存库中建立 .github/workflows/pages.yml，并填入以下内容：  
-```.github/workflows/pages.yml
+```yml
 name: Pages
 
 on:
@@ -123,7 +123,7 @@ $ npm install hexo-generator-feed --save
 ```
 
 在 Hexo 根目录的 _config.yml 文件中，添加以下内容：
-```_config.yml
+```yml
 feed:
   type: rss2
   path: sitemap.xml
@@ -133,7 +133,7 @@ feed:
 ```
 
 在 _config.icarus.yml 文件中，找到RSS配置并修改为以下形式：
-```_config.icarus.yml
+```yml
 RSS:
     icon: fas fa-rss
     url: /sitemap.xml
