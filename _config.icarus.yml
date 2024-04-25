@@ -116,10 +116,10 @@ navbar:
         #About: /about
         关于: /about
     # Links to be shown on the right of the navigation bar
-    links:
-        Download on GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+    #links:
+    #    Download on GitHub:
+    #        icon: fab fa-github
+    #        url: https://github.com/ppoffice/hexo-theme-icarus
 # Page footer configurations
 footer:
     # Copyright text
@@ -238,7 +238,7 @@ widgets:
         # Author name
         author: LZUOSS
         # Author title
-        author_title: Share Free Open Passion Team
+        author_title: Open, Passion, Team, Share, Free
         # Author's current location
         location: 中国 兰州
         # URL or path to the avatar image
