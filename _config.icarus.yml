@@ -98,7 +98,7 @@ head:
     meta:
         # Meta tag specified in <attribute>=<value> style
         # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
-        - ''
+        - 'name=msvalidate.01;content="FF7257500540B420736DE48EC568D82E"'
     # URL or path to the website's RSS atom.xml
     rss: /sitemap.xml
 # Page top navigation bar configurations
