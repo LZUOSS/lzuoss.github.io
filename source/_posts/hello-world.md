@@ -3,9 +3,8 @@ title: Welcome
 author: Petalzu
 categories: [笔记]
 tags: [Hexo]
-excerpt: "
-欢迎来到兰州大学开源社区网站。
-"
+excerpt: "欢迎来到兰州大学开源社区网站。"
+date: 2024-04-24 16:00:00
 ---
 
 欢迎来到兰州大学开源社区网站。
@@ -25,15 +24,15 @@ Git
 
 执行如下命令：
 ```bash
-$ npm install hexo
+npm install hexo
 ```
 添加Hexo 所在的目录下的 node_modules 添加到环境变量之中  
 
 在想要建立hexo的 <folder>下执行如下命令：
 ```bash
-$ hexo init <folder>
-$ cd <folder>
-$ npm install
+hexo init <folder>
+cd <folder>
+npm install
 ```
 
 在 Hexo 根目录执行以下命令安装主题，有两种方式：
@@ -47,17 +46,17 @@ theme: icarus
 ```
 或执行命令：
 ```bash
-$ hexo config theme icarus
+hexo config theme icarus
 ```
 
 添加新页：
 ```bash
-$ hexo new page
+hexo new page
 ```
 
 启动hexo服务器，访问 localhost:4000 查看效果：
 ```bash
-$ hexo server
+hexo server
 ```
 
 ### 推送
@@ -65,7 +64,7 @@ $ hexo server
 
 将 main 分支 push 到 GitHub仓库：
 ```bash
-$ git push -u origin main
+git push -u origin main
 ```
 或者使用GitHub Desktop等工具进行推送。
 
@@ -119,7 +118,7 @@ jobs:
 ### RSS
 在 Hexo 根目录执行以下命令安装插件：
 ```bash
-$ npm install hexo-generator-feed --save
+npm install hexo-generator-feed --save
 ```
 
 在 Hexo 根目录的 _config.yml 文件中，添加以下内容：

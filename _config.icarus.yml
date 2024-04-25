@@ -266,6 +266,9 @@ widgets:
             RSS:
                 icon: fas fa-rss
                 url: /sitemap.xml
+
+
+
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -277,33 +280,6 @@ widgets:
         collapsed: true
         # Maximum level of headings to show (1-6)
         depth: 3
-
-    # Categories widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: categories
-    # Recent posts widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: recent_posts
-    # Archives widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: archives
-    # Tags widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: tags
-        # How to order tags. For example 'name' to order by name in ascending order, and '-length' to order by number of posts in each tags in descending order
-        order_by: name
-        # Amount of tags to show. Will show all if not set.
-        amount: 
-        # Whether to show tags count, i.e. number of posts in the tag.
-        show_count: true
     # Recommendation links widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -312,15 +288,42 @@ widgets:
         # Names and URLs of the sites
         links:
             兰州大学开源软件镜像站: https://mirror.lzu.edu.cn/
-    # Google FeedBurner email subscription widget configurations
+    # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
-        type: subscribe_email
+        type: categories
+    # Recent posts widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: recent_posts
+    # Archives widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: archives
+    # Tags widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: tags
+        # How to order tags. For example 'name' to order by name in ascending order, and '-length' to order by number of posts in each tags in descending order
+        order_by: name
+        # Amount of tags to show. Will show all if not set.
+        amount: 
+        # Whether to show tags count, i.e. number of posts in the tag.
+        show_count: true
+
+    # Google FeedBurner email subscription widget configurations
+    #-
+        # Where should the widget be placed, left sidebar or right sidebar
+        #position: left
+        #type: subscribe_email
         # Hint text under the email input
-        description: 
+        #description: 
         # Feedburner ID
-        feedburner_id: ''
+        #feedburner_id:
     # Google AdSense unit configurations
     #-
         # Where should the widget be placed, left sidebar or right sidebar
@@ -336,11 +339,11 @@ widgets:
         position: left
         type: followit
         # Hint text under the email input
-        description: 
+        description: 输入您的电子邮件
         # Subscription form action URL
-        action_url: ''
+        action_url: https://api.follow.it/subscription-form/UzJ2TWhwMkN5d3F1YTJKSUw1aEl2YVg0Ujl1WjJtZXMrU2lCbjFnNUt1eVF0KzBtZE9UYklaMnI2Z28rejhMQ3BxYkdydFRBNG1aT09QdWpjVGtKdWJ6VlVINTQ2dWlCcDBHbFVuQjV2eFdmbzFoUUNoTUVsa3hySmxvb0hWVkx8YUNRWmgyWjEvVHk0dmhhRlA3Q0k2K0cwVVFUcTNCV2ZHREFGVDJrTE1Obz0=/8
         # Feed claiming verification code
-        verification_code: ''
+        verification_code: etnv9aFRd5ASLnr26cAq
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
