@@ -1,7 +1,7 @@
 ---
 title: 关于兰州大学开源社区
-date: 2021-04-24 12:00:00
-updated: 2021-04-24 12:00:00
+date: 2024-04-24 12:00:00
+updated: 2024-04-24 12:00:00
 ---
 Lanzhou University OSS Community
 

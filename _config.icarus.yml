@@ -115,6 +115,8 @@ navbar:
         标签: /tags
         #About: /about
         关于: /about
+        #Links: /links
+        成员: /links
     # Links to be shown on the right of the navigation bar
     #links:
     #    Download on GitHub:
